@@ -1,0 +1,26 @@
+---
+import "../css/global.css";
+import "../css/style.css";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="stylesheet" href="https://cloudflare.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+		<title>Astro</title>
+	</head>
+	<body class="font-inter bg-dark-primary text-gray-200 leading-relaxed overflow-x-hidden">
+		<slot>
+
+        </slot>
+		<script src="https://cdn.jsdelivr.net/npm/mixitup/dist/mixitup.min.js"></script>
+        <script>
+            import "../js/script.js";
+        </script>
+	</body>
+</html>

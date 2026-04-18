@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layouts.astro"
+import Home from "../layouts/Home.astro"
+import About from "../layouts/About.astro"
+import Projects from "../layouts/Projects.astro"
+import Statistics from "../layouts/Statistics.astro"
+import ProjectDetails from "../layouts/ProjectDetails.astro"
+import Header from "../components/Header.astro"
+import Sidebar from "../components/Sidebar.astro"
+---
+
+<Layout>
+	<!-- Overlay for mobile sidebar -->
+    <div class="overlay hidden fixed inset-0 bg-black/50 z-[95] backdrop-blur-sm" id="overlay"></div>
+
+    <Header></Header>
+
+    <Sidebar></Sidebar>
+
+    <!-- Main Content -->
+    <main class="ml-[400px] min-h-screen px-10 py-8 max-md:ml-0 max-md:px-5 max-md:pt-[calc(56px+1.25rem)] max-sm:px-4 max-sm:pt-[calc(56px+1rem)]">
+        <Home></Home>
+
+        <About></About>
+
+        <Projects></Projects>
+
+        <Statistics></Statistics>
+
+        <ProjectDetails></ProjectDetails>
+    </main>
+	
+</Layout>
