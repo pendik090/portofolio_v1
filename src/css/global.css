@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+    font-size: 12px;
+}
+
 @theme {
     /* Colors */
     --color-dark-primary: #0f0f14;
@@ -16,7 +20,7 @@
     --font-family-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Width / Spacing */
-    --spacing-sidebar: 400px;
+    --spacing-sidebar: 300px;
 
     /* Animation */
     --animate-fadeIn: fadeIn 0.35s ease;
