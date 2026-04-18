@@ -1,0 +1,12 @@
+# robots.txt — Portfolio Rosfendik
+# Referensi: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+# Izinkan semua crawler mengakses semua halaman
+User-agent: *
+Allow: /
+
+# Larang crawler mengakses file aset mentah (tidak perlu diindeks)
+Disallow: /assets/img/
+
+# Lokasi sitemap untuk mempermudah crawling
+Sitemap: https://rosfendik.dev/sitemap.xml

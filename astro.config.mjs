@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://rosfendik.dev', // Ganti dengan domain asli kamu
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
