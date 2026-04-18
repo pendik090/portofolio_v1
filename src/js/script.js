@@ -178,8 +178,8 @@ const VIDEO_EXTENSIONS = /\.(mp4|webm|ogg|mov)$/i;
 const projectsData = {
     'My Portal App': {
         images: [
-            './src/assets/img/projects/myportal.png',
-            './src/assets/img/projects/myportal2.png',
+            '/assets/img/projects/myportal.png',
+            '/assets/img/projects/myportal2.png',
         ],
         description: 'Full-featured e-commerce platform with payment integration, inventory management, and real-time analytics dashboard.',
         overview: 'MyPortal is a web-based vendor management and invoice processing platform designed to support corporate procurement operations. The system provides two separate interfaces: an admin portal for internal staff to manage vendors, purchase orders, invoices, and payments; and a self-service portal for external vendors to register, submit invoices, upload documents, and monitor payment status in real time. The system also supports multiple branches with data access restrictions based on user roles.',
@@ -202,11 +202,11 @@ const projectsData = {
     },
     'C-Mobile (Migration Project)': {
         images: [
-            './src/assets/img/projects/cmobile_before.png',
-            './src/assets/img/projects/link_before.png',
-            './src/assets/img/projects/cmobile_after.png',
-            './src/assets/img/projects/link_after1.png',
-            './src/assets/img/projects/link_after2.png',
+            '/assets/img/projects/cmobile_before.png',
+            '/assets/img/projects/link_before.png',
+            '/assets/img/projects/cmobile_after.png',
+            '/assets/img/projects/link_after1.png',
+            '/assets/img/projects/link_after2.png',
         ],
         description: 'Collaborative task management tool with real-time updates, drag-and-drop Kanban board, and team productivity tracking.',
         overview: 'C-Mobile is an internal web-based management system built for a training and education company. Originally built on CodeIgniter 3, the entire platform has been rebuilt from the ground up using Laravel 12. The move was driven by the need for a more maintainable, secure, and modern codebase. Functionally, it covers everything the old system did from HR management, leave and work permit approvals, student course registration, payment tracking, and training scheduling — but now with significantly better security, a more consistent UI built on the Edudash Bootstrap 5 template, and a codebase that is actually scalable going forward.',
@@ -229,9 +229,9 @@ const projectsData = {
     },
     'Uki Education': {
         images: [
-            './src/assets/img/projects/ukiedu3.png',
-            './src/assets/img/projects/ukiedu2.png',
-            './src/assets/img/projects/ukiedu1.png',
+            '/assets/img/projects/ukiedu3.png',
+            '/assets/img/projects/ukiedu2.png',
+            '/assets/img/projects/ukiedu1.png',
         ],
         description: 'Internal management system built for UKI Education — a tutoring/education center that operates across multiple branches.',
         overview: 'Internal management system built for UKI Education — a tutoring/education center that operates across multiple branches. It is basically a one-stop platform that handles two main worlds: the academic/student side (enrollments, payments, subjects, tutors, schools) and the HR/employee side (attendance leave, overtime, payroll, performance tracking). The system supports two separate user roles with their own login portals — admins who manage everything, and employees (karyawan) who have their own dashboard to handle personal matters.',
@@ -254,7 +254,7 @@ const projectsData = {
     },
     'Invoice System': {
         images: [
-            './src/assets/img/projects/invoice2.png',
+            '/assets/img/projects/invoice2.png',
         ],
         description: 'Invoice System is an internal business management system built for Creative Media, a company based in Surabaya.',
         overview: 'Invoice System is an internal business management system built for Creative Media, a company based in Surabaya. It handles the full lifecycle of client orders — from capturing company and service data, building orders, generating professional PDF invoices, to tracking payments and maintenance contracts. The system supports multi-role access (admin and super admin) and is designed to keep billing, reporting, and client communication all in one place.',
@@ -277,10 +277,10 @@ const projectsData = {
     },
     'Masjid Baiturrahiim': {
         images: [
-            './src/assets/img/projects/masjid1.png',
-            './src/assets/img/projects/masjid2.png',
-            './src/assets/img/projects/masjid3.png',
-            './src/assets/img/projects/masjid4.png',
+            '/assets/img/projects/masjid1.png',
+            '/assets/img/projects/masjid2.png',
+            '/assets/img/projects/masjid3.png',
+            '/assets/img/projects/masjid4.png',
         ],
         description: 'The Masjid Baiturrahiim website is a landing page built for a mosque located in Perumahan Griya Candramas, Sidoarjo, Indonesia.',
         overview: 'The Masjid Baiturrahiim website is a landing page built for a mosque located in Perumahan Griya Candramas, Sidoarjo, Indonesia. It was designed to give the local community and visitors a clean, informative online presence — covering the mosque\'s history, activities, and location. The site has a warm, community-driven feel with content like congregational prayers, Quranic education, regular Islamic study sessions, and the annual Qurban event. There is even a blog section with articles on topics like Fiqih, Tauhid, Akhlak, and Islamic history.',
@@ -303,9 +303,9 @@ const projectsData = {
     },
     'Smart PJU (Device Monitoring System)': {
         images: [
-            './src/assets/img/projects/smartpju3.png',
-            './src/assets/img/projects/smartpju1.png',
-            './src/assets/img/projects/smartpju2.png',
+            '/assets/img/projects/smartpju3.png',
+            '/assets/img/projects/smartpju1.png',
+            '/assets/img/projects/smartpju2.png',
         ],
         description: 'Smart PJU is a device monitoring system project focused on providing real-time data and analytics for public lighting management.',
         overview: 'SmartPJU is a web-based smart public devices management system built to help operators monitor, manage, and track the health of many hardware devices across multiple regions in Indonesia. It bridges IoT hardware with a web dashboard — devices push real-time sensor readings through an API, and the system takes care of the rest: storing records, visualizing data on a map, and flagging devices that go silent.',
@@ -328,9 +328,9 @@ const projectsData = {
     },
     'QHSE': {
         images: [
-            './src/assets/img/projects/qhse1.png',
-            './src/assets/img/projects/qhse2.png',
-            './src/assets/img/projects/qhse3.png',
+            '/assets/img/projects/qhse1.png',
+            '/assets/img/projects/qhse2.png',
+            '/assets/img/projects/qhse3.png',
         ],
         description: 'QHSE is a quality, health, safety, and environment management system project focused on providing real-time data and analytics for organizational compliance.',
         overview: 'Quality, Health, Safety, and Environment (QHSE) management platform built for construction or project-based companies. It centralizes everything from project tracking and daily work reports to equipment inspections and safety observations — all in one place with proper approval workflows, real-time dashboards, and role-based access so the right people see and do the right things.',
@@ -353,10 +353,10 @@ const projectsData = {
     },
     'UW Open (Tennis Match System)': {
         images: [
-            './src/assets/img/projects/uwopen4.png',
-            './src/assets/img/projects/uwopen1.png',
-            './src/assets/img/projects/uwopen2.png',
-            './src/assets/img/projects/uwopen3.png',
+            '/assets/img/projects/uwopen4.png',
+            '/assets/img/projects/uwopen1.png',
+            '/assets/img/projects/uwopen2.png',
+            '/assets/img/projects/uwopen3.png',
         ],
         description: 'UW Open is a real-time tennis match management system designed to streamline tournament organization and player management.',
         overview: 'An application designed to meet customer needs in providing a Real-Time integrated tennis match system application that is capable of handling the tennis tournaments includes matches, scoreboard, and standings held by Urban Wagyu in collaboration with Tennis Rek and BRImo as the main sponsors.',
@@ -377,8 +377,8 @@ const projectsData = {
     },
     'SR-Rental': {
         images: [
-            './src/assets/img/projects/srrental1.png',
-            './src/assets/img/projects/srrental2.png',
+            '/assets/img/projects/srrental1.png',
+            '/assets/img/projects/srrental2.png',
         ],
         description: 'SR-Rental is a real-time rental management system designed to streamline rental operations and customer management.',
         overview: 'An application designed to simplify customer needs in determining car rental options with various services such as various car types, affordable rental packages and ease in making car rental reservations in the Surabaya area.',
@@ -398,8 +398,8 @@ const projectsData = {
     },
     'Library App': {
         images: [
-            './src/assets/img/projects/libraryapp1.png',
-            './src/assets/img/projects/libraryapp2.png',
+            '/assets/img/projects/libraryapp1.png',
+            '/assets/img/projects/libraryapp2.png',
         ],
         description: 'Library App is a personal project built to manage book collections, track borrowing and returns, and generate reports for a personal or small library collection.',
         overview: 'An application designed to simplify library operations by providing features such as book cataloging, member management, and real-time tracking of borrowed and returned books. This app bulit with Laravel and Filament Admin Panel to provide a user-friendly interface for managing library resources and activities.',
@@ -422,8 +422,8 @@ const projectsData = {
     },
     'Wyndham Room Service': {
         images: [
-            './src/assets/img/design/wyndham_mockup1.png',
-            './src/assets/img/design/wyndham_mockup2.png',
+            '/assets/img/design/wyndham_mockup1.png',
+            '/assets/img/design/wyndham_mockup2.png',
         ],
         description: 'Wyndham Room Service is a prototype application designed to streamline the room service experience for guests at Wyndham hotels.',
         overview: 'Wyndham Room Service is a prototype application designed to streamline the room service experience for guests at Wyndham hotels. The app allows guests to easily browse the menu, place orders, and track their delivery status in real time. It also provides a user-friendly interface for hotel staff to manage incoming orders, update order statuses, and ensure timely delivery to guest rooms.',
@@ -441,7 +441,7 @@ const projectsData = {
     },
     'Mitra Tani 27': {
         images: [
-            './src/assets/img/design/mitratani_mockup.png',
+            '/assets/img/design/mitratani_mockup.png',
         ],
         description: 'Mitra Tani 27 is a partnership application system designed to connect farmers with suppliers and buyers.',
         overview: 'Partnership application system built in web and mobile versions for Mitra Tani 27 — a local agricultural cooperative that connects farmers with suppliers and buyers. The system includes a web-based admin panel for cooperative staff to manage farmer profiles, product listings, orders, and payments; and a mobile app for farmers to browse available products, place orders, and track deliveries.',
@@ -458,7 +458,7 @@ const projectsData = {
     },
     'Visitor Management System': {
         images: [
-            './src/assets/img/design/visitor_mockup.png',
+            '/assets/img/design/visitor_mockup.png',
         ],
         description: 'Visitor Management System is a web and mobile application designed to streamline the check-in process for visitors at corporate offices.',
         overview: 'Visitor Management System is a web application designed to streamline the check-in process for visitors at on site project. The system includes a web-based admin panel for reception staff to manage visitor profiles, appointments, and access permissions, using RFID tags for quick check-ins.',
@@ -475,7 +475,7 @@ const projectsData = {
     },
     'Basic Programming Course': {
         images: [
-            './src/assets/img/teaching/teaching.mp4',
+            '/assets/img/teaching/teaching.mp4',
         ],
         description: 'Basic Programming Course is a web and mobile application designed to teach beginners the fundamentals of programming.',
         overview: 'Teaching basic programming concepts to beginners using python programming language for 10 meetings. Each meeting lasts for 2 hours. The course covers fundamental topics such as variables, data types, control structures, functions, and object-oriented programming, using a user-friendly interface and real-time code execution to enhance the learning experience.',
