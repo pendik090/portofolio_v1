@@ -1,5 +1,8 @@
-<!-- ====== PROJECTS ====== -->
-        <section class="content-section hidden animate-fadeIn px-4" id="projects">
+---
+const { active = false } = Astro.props;
+---
+        <!-- ====== PROJECTS ====== -->
+        <section class={`content-section ${active ? 'active' : 'hidden'} animate-fadeIn px-4`} id="projects">
             <div class="mb-10">
                 <h1 class="flex items-center gap-2.5 text-3xl font-semibold  text-gray-200 max-sm:text-lg">
                     <!-- <svg class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> -->
@@ -18,8 +21,8 @@
                 <div class="grid grid-cols-2 gap-6 max-md:grid-cols-1" id="mixContainer">
                     <!-- Project 1 -->
                      <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/cmobile_after.png" alt="C-Mobile" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/cmobile_after.png" alt="C-Mobile" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">C-Mobile (Migration Project)</h3>
@@ -33,8 +36,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/myportal.png" alt="My Portal App" class="w-full h-full transition-transform duration-[400ms] hover:scale-105 object-contain">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/myportal.png" alt="My Portal App" class="w-full h-full transition-transform duration-400 hover:scale-105 object-contain">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">My Portal App</h3>
@@ -47,8 +50,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/ukiedu2.png" alt="Uki Education" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/ukiedu2.png" alt="Uki Education" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Uki Education</h3>
@@ -62,8 +65,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/invoice2.png" alt="Invoice System" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/invoice2.png" alt="Invoice System" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Invoice System</h3>
@@ -77,8 +80,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/masjid1.png" alt="Masjid Baiturrahiim" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/masjid1.png" alt="Masjid Baiturrahiim" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Masjid Baiturrahiim</h3>
@@ -91,8 +94,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/smartpju3.png" alt="Smart PJU (Device Monitoring System)" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/smartpju3.png" alt="Smart PJU (Device Monitoring System)" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Smart PJU (Device Monitoring System)</h3>
@@ -106,8 +109,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/qhse1.png" alt="QHSE" class="w-full h-full object-cover transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/qhse1.png" alt="QHSE" class="w-full h-full object-cover transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">QHSE</h3>
@@ -121,8 +124,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/uwopen4.png" alt="UW Open (Tennis Match System)" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/uwopen4.png" alt="UW Open (Tennis Match System)" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">UW Open (Tennis Match System)</h3>
@@ -136,12 +139,12 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/diakad4.png" alt="Diakademik" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/diakad4.png" alt="Diakademik" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Diakademik</h3>
-                            <p class="text-sm text-gray-400 mb-3 leading-relaxed">UW Open is a real time tennis match management system designed to streamline tournament organization and player management.</p>
+                            <p class="text-sm text-gray-400 mb-3 leading-relaxed">E-Learning application designed to simplify academic administration and student management for educational institutions.</p>
                             <div class="flex flex-wrap gap-1 mt-4">
                                 <span title="PHP"><i class="devicon-php-plain colored text-3xl"></i></span>
                                 <span title="Laravel"><i class="devicon-laravel-original colored text-3xl"></i></span>
@@ -151,8 +154,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/srrental1.png" alt="SR-Rental" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/srrental1.png" alt="SR-Rental" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">SR-Rental</h3>
@@ -166,8 +169,8 @@
                         </div>
                     </div>
                     <div class="mix project project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/projects/libraryapp1.png" alt="Library App" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/projects/libraryapp1.png" alt="Library App" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Library App</h3>
@@ -181,8 +184,8 @@
                         </div>
                     </div>
                     <div class="mix teaching project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/teaching/thumbnail_teaching.jpeg" alt="Basic Programming Course" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/teaching/thumbnail_teaching.jpeg" alt="Basic Programming Course" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Basic Programming Course</h3>
@@ -194,8 +197,8 @@
                         </div>
                     </div>
                     <div class="mix design project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/design/mitratani_mockup.png" alt="Mitra Tani 27" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/design/mitratani_mockup.png" alt="Mitra Tani 27" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Mitra Tani 27</h3>
@@ -206,8 +209,8 @@
                         </div>
                     </div>
                     <div class="mix design project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/design/wyndham_mockup1.png" alt="Wyndham Room Service" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/design/wyndham_mockup1.png" alt="Wyndham Room Service" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Wyndham Room Service</h3>
@@ -218,8 +221,8 @@
                         </div>
                     </div>
                     <div class="mix design project-card bg-dark-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                        <div class="h-[180px] overflow-hidden bg-dark-secondary">
-                            <img src="/assets/img/design/visitor_mockup.png" alt="Visitor Management System" class="w-full h-full object-contain transition-transform duration-[400ms] hover:scale-105">
+                        <div class="h-45 overflow-hidden bg-dark-secondary">
+                            <img src="/assets/img/design/visitor_mockup.png" alt="Visitor Management System" class="w-full h-full object-contain transition-transform duration-400 hover:scale-105">
                         </div>
                         <div class="p-5">
                             <h3 class="text-base font-semibold mb-2">Visitor Management System</h3>

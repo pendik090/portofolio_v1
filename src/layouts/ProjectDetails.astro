@@ -1,5 +1,8 @@
-<!-- ====== PROJECT DETAIL ====== -->
-        <section class="content-section hidden animate-fadeIn px-4" id="project-detail">
+---
+const { active = false } = Astro.props;
+---
+        <!-- ====== PROJECT DETAIL ====== -->
+        <section class={`content-section ${active ? 'active' : 'hidden'} animate-fadeIn px-4`} id="project-detail">
             <!-- Back Button -->
             <div class="mb-6 pt-4">
                 <button id="projectDetailBack" class="inline-flex items-center gap-2 text-[1.15rem] text-gray-400 duration-300 group">

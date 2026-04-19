@@ -1,5 +1,8 @@
-<!-- ====== ABOUT ====== -->
-        <section class="content-section hidden animate-fadeIn px-4" id="about">
+---
+const { active = false } = Astro.props;
+---
+        <!-- ====== ABOUT ====== -->
+        <section class={`content-section ${active ? 'active' : 'hidden'} animate-fadeIn px-4`} id="about">
             <!-- Description -->
             <div class="mb-10">
                 <h1 class="flex items-center gap-2.5 text-[1.75rem] font-semibold mb-5 text-gray-200 max-sm:text-lg">

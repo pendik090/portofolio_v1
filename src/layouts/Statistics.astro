@@ -1,5 +1,8 @@
-<!-- ====== STATISTICS ====== -->
-        <section class="content-section hidden animate-fadeIn px-4" id="statistics">
+---
+const { active = false } = Astro.props;
+---
+        <!-- ====== STATISTICS ====== -->
+        <section class={`content-section ${active ? 'active' : 'hidden'} animate-fadeIn px-4`} id="statistics">
             <div class="mb-10">
                 <h2 class="flex items-center gap-2.5 text-xl font-semibold mb-5 text-gray-200 max-sm:text-lg">
                     <svg class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>

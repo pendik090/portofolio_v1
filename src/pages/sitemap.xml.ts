@@ -3,7 +3,7 @@ import type { APIRoute } from 'astro';
 /**
  * Dynamic Sitemap Generator untuk Portfolio Rosfendik
  *
- * Sitemap ini mencakup halaman utama beserta setiap section
+ * Sitemap ini mencakup semua halaman yang di-generate oleh Astro
  * agar crawler (Googlebot, Bingbot, dll) dapat memahami
  * struktur konten dan mengindeks secara lebih optimal.
  *
@@ -22,10 +22,8 @@ const TODAY = new Date().toISOString().split('T')[0];
 /**
  * Daftar URL yang dimasukkan ke sitemap.
  *
- * Catatan: Anchor fragment (#section) secara teknis adalah bagian dari
- * halaman yang sama — Google pada umumnya tidak mengindeks mereka sebagai
- * URL terpisah. Namun, menyertakannya membantu crawler memahami
- * struktur konten dan meningkatkan relevansi crawling.
+ * Setiap entry merepresentasikan halaman statis yang di-generate
+ * oleh Astro melalui file-based routing (src/pages/).
  *
  * priority  → 0.0 (rendah) s/d 1.0 (tinggi)
  * changefreq → seberapa sering konten berubah (mempengaruhi jadwal recrawl)
@@ -39,22 +37,22 @@ const pages: SitemapEntry[] = [
     lastmod: TODAY,
   },
   {
-    // Section About — informasi profil & pengalaman karir
-    path: '/#about',
+    // Halaman About — informasi profil & pengalaman karir
+    path: '/about',
     changefreq: 'monthly',
     priority: '0.8',
     lastmod: TODAY,
   },
   {
-    // Section Projects — portofolio proyek (sering diupdate)
-    path: '/#projects',
+    // Halaman Projects — portofolio proyek (sering diupdate)
+    path: '/projects',
     changefreq: 'weekly',
     priority: '0.9',
     lastmod: TODAY,
   },
   {
-    // Section Statistics — statistik GitHub & kontribusi
-    path: '/#statistics',
+    // Halaman Statistics — statistik GitHub & kontribusi
+    path: '/statistics',
     changefreq: 'weekly',
     priority: '0.6',
     lastmod: TODAY,
@@ -93,7 +91,7 @@ export const GET: APIRoute = ({ site }) => {
   // Fallback ke domain placeholder jika belum dikonfigurasi
   const baseUrl = site
     ? site.href.replace(/\/$/, '')
-    : 'https://rosfendik.dev';
+    : 'https://rosfendik.my.id';
 
   const xml = buildSitemap(baseUrl, pages);
 

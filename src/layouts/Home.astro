@@ -1,5 +1,8 @@
+        ---
+const { active = false } = Astro.props;
+---
         <!-- ====== HOME ====== -->
-        <section class="content-section active animate-fadeIn px-4" id="home">
+        <section class={`content-section ${active ? 'active' : 'hidden'} animate-fadeIn px-4`} id="home">
             <!-- Hero -->
             <div class="pt-12 pb-8 mb-10 max-md:pt-6 max-md:pb-4">
                 <h1 class="hero-name text-[2.5rem] font-bold leading-tight text-justify mb-3 max-md:text-[2rem] max-sm:text-[1.65rem]">Hi, I'm Rosfendik</h1>

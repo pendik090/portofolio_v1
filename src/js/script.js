@@ -7,7 +7,15 @@ const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const menuToggle = document.getElementById('menuToggle');
 
-function navigateTo(sectionId) {
+// Route mapping for History API
+const sectionRoutes = {
+    'home': '/',
+    'about': '/about',
+    'projects': '/projects',
+    'statistics': '/statistics',
+};
+
+function navigateTo(sectionId, updateHistory = true) {
     // Pause all slider videos when navigating away
     document.querySelectorAll('#sliderTrack video').forEach(v => v.pause());
 
@@ -26,6 +34,11 @@ function navigateTo(sectionId) {
     navLinks.forEach(link => {
         link.classList.toggle('active', link.dataset.section === sectionId);
     });
+
+    // Update browser URL
+    if (updateHistory && sectionRoutes[sectionId] !== undefined) {
+        history.pushState({ section: sectionId }, '', sectionRoutes[sectionId]);
+    }
 
     // Close mobile sidebar
     closeSidebar();
@@ -52,6 +65,17 @@ document.querySelectorAll('[onclick]').forEach(el => {
         });
     }
 });
+
+// Handle browser back/forward
+window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.section) {
+        navigateTo(e.state.section, false);
+    }
+});
+
+// Set initial history state from server-rendered active section
+const initialSection = document.body.dataset.activeSection || 'home';
+history.replaceState({ section: initialSection }, '', window.location.pathname);
 
 // =============================================
 // Mobile Sidebar Toggle
@@ -365,6 +389,32 @@ const projectsData = {
             'Standings — dynamic ranking of teams based on points and score differentials.',
             'MVP Selection — post-tournament MVP selection with criteria-based scoring and voting system',
             'Data Master Management — including Game Levels, Courts, Team, and Players.',
+        ],
+        tech: [
+             { name: 'Laravel', badge: 'badge-red', icon: 'devicon-laravel-original' },
+            { name: 'Bootstrap', badge: 'badge-green', icon: 'devicon-bootstrap-plain' },
+            { name: 'MySQL', badge: 'badge-slate', icon: 'devicon-mysql-plain' },
+            { name: 'Chart.js', badge: 'badge-yellow', icon: 'devicon-chartjs-plain' },
+        ],
+        github: '#',
+        demo: '#'
+    },
+    'Diakademik': {
+        images: [
+            '/assets/img/projects/diakad4.png',
+            '/assets/img/projects/diakad1.png',
+            '/assets/img/projects/diakad2.png',
+            '/assets/img/projects/diakad3.png',
+        ],
+        description: 'Diakademik is an academic management system designed to streamline educational administration and student management.',
+        overview: 'DI Akademik is a full-featured School Management Information System (SMIS) built for Indonesian educational institutions. It covers pretty much every operational angle of a school — from student admissions (PPDB) all the way through graduation — with a heavily role-based architecture that serves administrators, teachers, students, parents, finance staff, guidance counselors, and more. The system has grown significantly over time (migrations dating back to 2018), showing it is a production system that has been actively maintained and expanded.',
+        features: [
+            'E-Learning — online classes, teaching materials with file uploads, quizzes with multiple question types, student exam management',
+            'Multi-Role Access Control — 18+ distinct roles (admin, academic, teacher, student, parent, finance, BK, tendik, etc.)',
+            'Student Admissions (PPDB) — new student registration, document requirements, selection process, and placement',
+            'Attendance Tracking — daily attendance, subject-level attendance, extracurricular attendance, and fingerprint device integration',
+            'Financial Management — billing, fee payments, income/expense tracking, RAPB (school budget plan), monthly/annual book closing, online payment transactions, and payment vouchers',
+            'Grading & Report Cards — subject grades, extracurricular grades, mid-term report cards (rapor sisipan), student book records'
         ],
         tech: [
              { name: 'Laravel', badge: 'badge-red', icon: 'devicon-laravel-original' },

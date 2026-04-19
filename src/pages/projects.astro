@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layouts.astro"
+import HomeSection from "../layouts/Home.astro"
+import AboutSection from "../layouts/About.astro"
+import ProjectsSection from "../layouts/Projects.astro"
+import StatisticsSection from "../layouts/Statistics.astro"
+import ProjectDetails from "../layouts/ProjectDetails.astro"
+import Header from "../components/Header.astro"
+import Sidebar from "../components/Sidebar.astro"
+---
+
+<Layout
+	title="Projects — Rosfendik"
+	description="Explore Rosfendik's portfolio of web development projects built with Laravel, Flutter, TailwindCSS, and other modern technologies."
+	ogTitle="Projects — Rosfendik"
+	ogDescription="Explore web development projects built with Laravel, Flutter, TailwindCSS, and other modern technologies."
+	activeSection="projects"
+>
+	<!-- Overlay for mobile sidebar -->
+    <div class="overlay hidden fixed inset-0 bg-black/50 z-95 backdrop-blur-sm" id="overlay"></div>
+
+    <Header></Header>
+
+    <Sidebar activeSection="projects"></Sidebar>
+
+    <!-- Main Content -->
+    <main class="ml-sidebar min-h-screen px-10 py-8 max-md:ml-0 max-md:px-5 max-md:pt-19 max-sm:px-4 max-sm:pt-18">
+        <HomeSection></HomeSection>
+
+        <AboutSection></AboutSection>
+
+        <ProjectsSection active={true}></ProjectsSection>
+
+        <StatisticsSection></StatisticsSection>
+
+        <ProjectDetails></ProjectDetails>
+    </main>
+	
+</Layout>

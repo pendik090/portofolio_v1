@@ -1,7 +1,10 @@
+---
+const { activeSection = 'home' } = Astro.props;
+---
 <!-- Sidebar -->
-    <aside class="sidebar fixed top-0 left-0 w-sidebar max-md:w-[85vw] max-md:max-w-[300px] h-screen bg-dark-primary flex flex-col z-[100] transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" id="sidebar">
+    <aside class="sidebar fixed top-0 left-0 w-sidebar max-md:w-[85vw] max-md:max-w-sidebar h-screen bg-dark-primary flex flex-col z-100 transition-transform duration-300 ease-in-out" id="sidebar">
         <div class="px-7 pt-9 pb-7 text-center max-sm:px-4 max-sm:pt-6 max-sm:pb-4">
-            <div class="w-[128px] h-[128px] max-sm:w-[90px] max-sm:h-[90px] rounded-full mx-auto mb-5 overflow-hidden border-2 border-accent p-[3px] bg-dark-primary">
+            <div class="w-32 h-32 max-sm:w-22.5 max-sm:h-22.5 rounded-full mx-auto mb-5 overflow-hidden border-2 border-accent p-0.75 bg-dark-primary">
                 <img src="/assets/img/profile4.jpeg" alt="Profile Photo" class="w-full h-full rounded-full object-cover">
             </div>
             <h2 class="text-2xl font-semibold mb-1">Rosfendik</h2>
@@ -26,17 +29,17 @@
                 </a>
             </div>
         </div>
-        <hr class="w-80 border-t border-border border-gray-400 mt-5 mx-auto">
+        <hr class="w-80 border-t border-border mt-5 mx-auto">
         <nav class="flex-1 mt-12 max-sm:px-3 flex flex-col justify-start gap-1.5 max-w-90">
-            <a href="/home" class="nav-link active flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card" data-section="home">
+            <a href="/" class={`nav-link ${activeSection === 'home' ? 'active' : ''} flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card`} data-section="home">
                 <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 <span>Home</span>
             </a>
-            <a href="/about" class="nav-link flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card" data-section="about">
+            <a href="/about" class={`nav-link ${activeSection === 'about' ? 'active' : ''} flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card`} data-section="about">
                 <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 <span>About Me</span>
             </a>
-            <a href="/projects" class="nav-link flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card" data-section="projects">
+            <a href="/projects" class={`nav-link ${activeSection === 'projects' ? 'active' : ''} flex items-center gap-3.5 px-8 py-3.5 rounded-lg text-gray-400 text-[1.25rem] font-normal transition-all duration-300 cursor-pointer hover:text-gray-200 hover:bg-dark-card`} data-section="projects">
                 <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
                 <span>Projects</span>
             </a>
